@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #fbfaf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(135deg, rgba(223, 244, 234, 0.9), rgba(251, 250, 247, 0) 34rem),
+    linear-gradient(315deg, rgba(247, 181, 56, 0.24), rgba(251, 250, 247, 0) 28rem),
+    #fbfaf7;
+  color: #18202a;
+}
+
+.ProseMirror {
+  min-height: 360px;
+}
+
+.ProseMirror:focus {
+  border-color: #2556d9;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: rgba(24, 32, 42, 0.38);
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.ProseMirror table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.ProseMirror td,
+.ProseMirror th {
+  min-width: 1em;
+  position: relative;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.admin-shell {
+  background-image:
+    linear-gradient(rgba(24, 32, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 32, 42, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
